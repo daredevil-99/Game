@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess the Number</title>
+</head>
+<body>
+    <h1>Welcome to the Game</h1>
+    <form method="POST" action="/">
+        <label>Enter your guess (1 to 5): </label>
+        <input type="number" name="user_guess" min="1" max="5">
+        <button type="submit">Submit</button>
+    </form>
+        {% if result %}
+            <p>{{ result }}</p>
+        {% endif %}
+</body>
+</html>
