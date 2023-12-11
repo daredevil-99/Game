@@ -15,7 +15,7 @@ COPY . /application
 RUN powershell -Command "python -m pip install --upgrade pip"
 
 # Install requirements
-RUN powershell -Command "python -m pip install -r requirements.txt"
+RUN powershell -Command "python -m pip install -r C:\Users\Admin\Documents\Python_program\requirements.txt"
 
 # Set the entry point
 CMD ["python", "application.py"]
