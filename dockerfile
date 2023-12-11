@@ -12,10 +12,11 @@ WORKDIR /PYTHON_PROGRAM
 COPY . /application
 
 # Upgrade pip
-RUN powershell -Command "python -m pip install --upgrade pip"
+RUN python -m pip install --upgrade pip
 
 # Install requirements
-RUN powershell -Command "python -m pip install -r C:\Users\Admin\Documents\Python_program\requirements.txt"
+COPY requirements.txt /app/requirements.txt
+RUN python -m pip install -r /app/requirements.txt
 
 # Set the entry point
 CMD ["python", "application.py"]
